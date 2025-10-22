@@ -1,0 +1,152 @@
+/* フォント設定 */
+body {
+  font-family: "Noto Sans JP", "Inter", sans-serif;
+  margin: 0;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* ヘッダー */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  transition: background 0.3s, box-shadow 0.3s;
+  z-index: 1000;
+}
+header.scrolled {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #0d47a1;
+}
+
+/* ヒーローセクション */
+.hero {
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  background: linear-gradient(135deg, #1976d2, #42a5f5);
+  color: white;
+}
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* メインコンテナ */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+/* 見出し */
+h2 {
+  font-size: 1.8rem;
+  border-left: 6px solid #1976d2;
+  padding-left: 10px;
+  margin-bottom: 1.5rem;
+}
+
+/* カードグリッド */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+.card h3 {
+  margin-top: 0;
+  color: #1a237e;
+}
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ボタン */
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #1976d2;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.button:hover {
+  background: #1565c0;
+  box-shadow: 0 4px 10px rgba(25,118,210,0.3);
+}
+
+/* PDFリスト */
+.pdf-list li {
+  margin: 0.8rem 0;
+}
+.pdf-list a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 600;
+}
+.pdf-list a:hover {
+  text-decoration: underline;
+}
+
+/* フッター */
+footer {
+  background: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+}
+
+/* レスポンシブ */
+@media (max-width: 600px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav a {
+    margin: 0.5rem;
+  }
+}
